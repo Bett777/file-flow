@@ -1,0 +1,52 @@
+server:
+  port: 18011
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/document-flow?autoReconnect=true&failOverReadOnly=false&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  redis:
+    host: 192.168.120.133
+    port: 6379
+    # password:  默认没有密码，生产环境一定要设置密码
+    # 连接超时时间（ms）
+    timeout: 10000
+    # Redis默认情况下有16个分片，这里配置具体使用的分片，默认是0
+    database: 0
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
+  minio:
+#    url: http://192.168.120.132:9000/
+#    access-key: ADMIN-JGC
+#    secret-key: 123456-JGC
+    url: https://play.min.io
+    access-key: Q3AM3UQ867SPQQA43P2F
+    secret-key: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
+    bucket-image: jgc-file-flow-image
+    bucket-doc: jgc-file-flow-doc
+jgc:
+  web:
+    cors:
+      config:
+        allowedHeaders:
+          - "*"
+        allowedOrigins:
+          - "*"
+        allowedMethods:
+          - POST
+          - GET
+          - DELETE
+          - PUT
+          - OPTIONS
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

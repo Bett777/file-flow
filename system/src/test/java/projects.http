@@ -1,0 +1,51 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:18011/projects/page
+Content-Type: application/json
+
+{
+  "paging": {
+    "pageNumber": 2,
+    "pageSize": 10,
+    "totalPage": 0,
+    "totalNumber": 0
+  },
+  "params": {
+    "projectName": "文档管理",
+    "projectCode": null,
+    "groupId": null
+  }
+}
+
+###
+POST http://localhost:18011/projects
+Content-Type: application/json
+
+{
+  "projectCode": "1014",
+  "projectName": "文档管理系统14",
+  "path": "http://null",
+  "groupId": 3,
+  "groupName": "C组"
+}
+
+###
+PUT http://localhost:18011/projects
+Content-Type: application/json
+
+{
+  "projectId": 14,
+  "projectCode": "1014",
+  "projectName": "文档管理系统14修改",
+  "path": "http://null",
+  "groupId": 3,
+  "groupName": "C组"
+}
+
+###
