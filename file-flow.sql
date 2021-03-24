@@ -77,7 +77,7 @@ CREATE TABLE `sys_user` (
 /*Data for the table `sys_user` */
 
 insert  into `sys_user`(`user_id`,`user_name`,`password`,`enabled`) values 
-(1,'admin','$2a$10$FGji0e60qDl8Ba9OShZG9.FiS83StMljnM6ohSRTZCJXjaLyXQ4a.','');
+(1,'admin','$2a$10$GsnuSeJX4DRezxljQf8mH.OjxeCjIUOZeBhyeAqzkwV.mPHNgI0vO','');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

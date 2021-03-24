@@ -34,7 +34,7 @@ public class AccountService {
         return accountEntity;
     }
 
-    public boolean check(String currentPassword, String password) {
+    boolean check(String currentPassword, String password) {
         return bCryptPasswordEncoder.matches(currentPassword, password);
     }
 }
